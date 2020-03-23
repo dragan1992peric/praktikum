@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<script src="asd.json"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<table id="employee_table">
+		<tr>
+			<th>IME</th>
+			<th>ADRESA</th>
+			<th>POL</th>
+			<th>ZANIMANJE</th>
+			<th>GODINE</th>
+		</tr>
+	</table>
+		<input type="text" name="" id="a">
+		<input type="text" name="" id="b">
+		<input type="text" name="" id="c">
+		<input type="text" name="" id="d">
+		<input type="text" name="" id="e">
+<button id="q" onclick="Def()">asdasd</button>
+
+
+
+</body>
+</html>
+
+<script>
+	$(document).ready(function() {
+		$.getJSON("asd.json", function(data){
+			var employee_data = '';
+			$.each(data, function(key, value){
+				employee_data +='<tr>';
+				employee_data +='<td>'+value.ime+'</td>';
+				employee_data +='<td>'+value.adresa+'</td>';
+				employee_data +='<td>'+value.pol+'</td>';
+				employee_data +='<td>'+value.zanimanje+'</td>';
+				employee_data +='<td>'+value.godine+'</td>';
+				employee_data +='</tr>';
+			});
+			$('#employee_table').append(employee_data);
+
+		});
+	});
+
+
+	$.getJSON("asd.json", function(json) {
+    console.log(json);
+});
+
+
+
+
+
+	function Def (){
+		var a = document.getElementById("a").value;
+		var b = document.getElementById("b").value;
+		var c = document.getElementById("c").value;
+		var d = document.getElementById("d").value;
+		var e = document.getElementById("e").value;
+
+		asd.push({"ime":a,"adresa":b,"pol":c,"zanimanje":d,"godine":e})
+	}
+</script>
+

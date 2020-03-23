@@ -1,0 +1,129 @@
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="stil.css">
+    <script src="js.js"></script>
+	<script src="asd.json"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	 <script src="https://account.snatchbot.me/script.js"></script><script>window.sntchChat.Init(97282)</script> 
+</head>
+    
+<body>
+<script>
+nova();
+</script>
+<form style="width: 20%">
+<fieldset class="fild">
+Ime: <input type="text" id="ime"><br><br>
+Prezime: <input type="text" id="prezime"><br><br>
+Broj leta: <input type="text" id="brleta"><br><br>
+Destinacija: 
+<select id="aerodrom">
+<option>Bali</option>
+<option>London</option>
+<option>Paris</option>
+<option>Rome</option>
+<option>New York City</option>
+<option>Crete</option>
+<option>Barcelona</option>
+</select>
+<br><br>
+Broj sedista: 
+<select id="brsedista">
+<option>Jedno</option>
+<option>Dva</option>
+<option>Tri</option>
+</select>
+<br><br>
+Zelite li da iskoritite kupon? <input type="checkbox" id="kupon" onchange="unoskupona()">Da<br><br>
+Kupon:<input type="text" id="akupon" disabled="disabled"><br><br>
+<input type="button" value="Potvrdi" onClick="podaci()">
+</form>
+Vasa porudzbina:<div id="polje"><br>Niste jos nista porucili!</div>
+</fieldset><div id="ad">
+<label>Aplikacije za nagradno putovanje</label>
+	<button onclick="DodPon()">A</button></div>
+
+
+	<form id="e" class="w">
+
+	<table id="employee_table">
+		<tr>
+			<th>IME</th>
+			<th>ADRESA</th>
+			<th>POL</th>
+			<th>ZANIMANJE</th>
+			<th>GODINE</th>
+		</tr>
+	</table>
+	<button onclick="Cao()">Admin logout</button>
+	<script>
+	$(document).ready(function() {
+		$.getJSON("asd.json", function(data){
+			var employee_data = '';
+			$.each(data, function(key, value){
+				employee_data +='<tr>';
+				employee_data +='<td>'+value.ime+'</td>';
+				employee_data +='<td>'+value.adresa+'</td>';
+				employee_data +='<td>'+value.pol+'</td>';
+				employee_data +='<td>'+value.zanimanje+'</td>';
+				employee_data +='<td>'+value.godine+'</td>';
+				employee_data +='</tr>';
+			});
+			$('#employee_table').append(employee_data);
+
+		});
+	});
+
+
+	$.getJSON("asd.json", function(json) {
+    console.log(json);
+});
+</script>
+	</form>
+
+	<div id="box"></div>
+
+	<script type="text/javascript">
+		 var rows = [{
+    destinacija: "DESTINACIJA",
+    prevoz: "PREVOZ",
+    datum: "DATUM",
+    cena: "CENA"
+
+}, {
+    destinacija: "KRF",
+    prevoz: "AUTOBUS",
+    datum: "22.06",
+    cena: "300e / 10 NOCI"
+}, {
+    destinacija: "LEVKADA",
+    prevoz: "AUTOBUS",
+    datum: "30.07",
+    cena: "280e / 8 NOCI"
+}, {
+    destinacija: "ZAKINTOS",
+    prevoz: "AVION",
+    datum: "28.06",
+    cena: "800e / 20 DANA"
+}, {
+    destinacija: "PARALIJA",
+    prevoz: "SOPSTVENI",
+    datum: "32.08",
+    cena: "640e / 17 DANA"
+}];
+
+var html = "<table border='1|1'>";
+for (var i = 0; i < rows.length; i++) {
+    html+="<tr>";
+    html+="<td>"+rows[i].destinacija+"</td>";
+    html+="<td>"+rows[i].prevoz+"</td>";
+    html+="<td>"+rows[i].datum+"</td>";
+    html+="<td>"+rows[i].cena+"</td>";
+
+    html+="</tr>";
+
+}
+html+="</table>";
+document.getElementById("box").innerHTML = html
+	</script>
+</body>

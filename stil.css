@@ -1,0 +1,28 @@
+.w {
+	visibility: hidden;
+}
+.q{
+	visibility: visible;
+}
+.fild {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: 600px;
+	width: 600px;
+	background-color: gray;
+}
+#box {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 385px;
+	height: 125px;
+	background-color: cyan;
+}
+#ad {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}

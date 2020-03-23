@@ -1,0 +1,40 @@
+[{
+	"id":"1",
+	"ime":"Djole",
+	"adresa":"Skolska broj 1",
+	"pol":"muski",
+	"zanimanje":"Gatara",
+	"godine":"69"
+},
+{
+	"id":"2",
+	"ime":"Klempa",
+	"adresa":"Karenjina broj 5",
+	"pol":"muski",
+	"zanimanje":"Zidar",
+	"godine":"19"
+},
+{
+	"id":"3",
+	"ime":"Tosa",
+	"adresa":"Nema ulice broj 450",
+	"pol":"muski",
+	"zanimanje":"Besposlen",
+	"godine":"41"
+},
+{
+	"id":"4",
+	"ime":"Šako",
+	"adresa":"Crnogorskih davljenika broj 4",
+	"pol":"Umenta",
+	"zanimanje":"Svira kupusu",
+	"godine":"50"
+},
+{
+	"id":"5",
+	"ime":"Milka",
+	"adresa":"Rts bb",
+	"pol":"zenski",
+	"zanimanje":"Zeli svima dobro vece",
+	"godine":"90"
+}]

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<div id="box"></div>
+</body>
+</html>
+<script type="text/javascript">
+  var rows = [{
+    destinacija: "DESTINACIJA",
+    prevoz: "PREVOZ",
+    datum: "DATUM",
+    cena: "CENA"
+
+}, {
+    destinacija: "KRF",
+    prevoz: "AUTOBUS",
+    datum: "22.06",
+    cena: "300e / 10 NOCI"
+}, {
+    destinacija: "LEVKADA",
+    prevoz: "AUTOBUS",
+    datum: "30.07",
+    cena: "280e / 8 NOCI"
+}, {
+    destinacija: "ZAKINTOS",
+    prevoz: "AVION",
+    datum: "28.06",
+    cena: "800e / 20 DANA"
+}, {
+    destinacija: "PARALIJA",
+    prevoz: "SOPSTVENI",
+    datum: "32.08",
+    cena: "640e / 17 DANA"
+}];
+
+var html = "<table border='1|1'>";
+for (var i = 0; i < rows.length; i++) {
+    html+="<tr>";
+    html+="<td>"+rows[i].destinacija+"</td>";
+    html+="<td>"+rows[i].prevoz+"</td>";
+    html+="<td>"+rows[i].datum+"</td>";
+    html+="<td>"+rows[i].cena+"</td>";
+
+    html+="</tr>";
+
+}
+html+="</table>";
+document.getElementById("box").innerHTML = html;
+</script>
